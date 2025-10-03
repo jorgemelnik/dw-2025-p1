@@ -1,6 +1,5 @@
 import Fastify from "fastify";
 import { dirname, join } from "path";
-import fastifyStatic from "@fastify/static";
 
 const fastify = Fastify({
   logger: true,
