@@ -16,3 +16,7 @@ const tareas = [
     titulo: "Bañarse",
   },
 ];
+
+export function findAllTareas(){
+  return tareas
+}
