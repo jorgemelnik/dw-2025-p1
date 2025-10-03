@@ -1,0 +1,26 @@
+{
+  "name": "parcial1-front",
+  "version": "1.0.0",
+  "description": "Primer parcial Desarrollo web y mobile (UCU)",
+  "homepage": "https://github.com/jorgemelnik/dw-2025-p1#readme",
+  "bugs": {
+    "url": "https://github.com/jorgemelnik/dw-2025-p1/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/jorgemelnik/dw-2025-p1.git"
+  },
+  "license": "ISC",
+  "author": "Jorge Melnik",
+  "type": "module",
+  "main": "front.ts",
+  "scripts": {
+    "dev": "node --watch front.ts"
+  },
+  "dependencies": {
+    "fastify": "^5.6.1"
+  },
+  "devDependencies": {
+    "@types/node": "^24.6.2"
+  }
+}
