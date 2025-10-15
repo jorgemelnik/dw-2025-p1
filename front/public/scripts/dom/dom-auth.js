@@ -8,13 +8,24 @@ import * as auth from "../services/auth.js";
 
 userDataElement.addEventListener("mouseenter", () => {
   const user = auth.getUser();
-  if (user) userDataElement.textContent = user.roles.join(",");
-  else userDataElement.textContent = "roles";
+  // if (user) userDataElement.textContent = user.roles.join(",");
+  // else userDataElement.textContent = "no hay roles";
+  if (user) {
+    userDataElement.innerHTML = `
+    ${user.roles.join(",")}
+    <input type="button" id="btnSalir" value="SALIR"/>
+  `;
+    const btnSalir = document.getElementById("btnSalir");
+    btnSalir.addEventListener("click", () => {
+      auth.logout();
+      mostrarLogin();
+    });
+  } else userDataElement.textContent = "no hay roles";
 });
 userDataElement.addEventListener("mouseleave", () => {
   const user = auth.getUser();
   if (user) userDataElement.textContent = user.username;
-  else userDataElement.textContent = "username";
+  else userDataElement.textContent = "anonimo";
 });
 
 export async function mostrarLogin() {

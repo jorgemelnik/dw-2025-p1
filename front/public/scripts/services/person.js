@@ -23,8 +23,13 @@ const erase = async function (id_persona) {
   await api.delete(baseUrl + id_persona);
 };
 
+const getTasks = async function (id_persona) {
+  return api.get(baseUrl + id_persona + "/tareas");
+};
+
 const personService = {
   getAll,
+  getTasks,
   create,
   update,
   getById,
